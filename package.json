@@ -1,12 +1,14 @@
 {
-    "name": "forkify",
+    "name": "recipe-app",
     "version": "1.0.0",
-    "description": "forkify project",
+    "description": "recipe project",
     "main": "index.js",
     "scripts": {
         "dev": "webpack --mode development",
         "build": "webpack --mode production",
-        "start": "webpack-dev-server --mode development --open"
+        "test": "webpack-dev-server --mode development --open",
+        "start": "node server.js",
+        "heroku-postbuild": "webpack -p"
     },
     "author": "Sebastian Baeza",
     "license": "ISC",
@@ -22,6 +24,7 @@
     "dependencies": {
         "@babel/polyfill": "^7.4.4",
         "axios": "^0.19.0",
+        "express": "^4.17.1",
         "fractional": "^1.0.0",
         "uniqid": "^5.0.3"
     }
